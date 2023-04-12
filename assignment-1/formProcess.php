@@ -14,14 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        
-        $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
-
-        
-        if(mysqli_query($conn, $sql)){
-            header("Location: successful.php");
-            exit;
-        } 
+        addUser('$name', '$email', '$password');
     }
 }
 ?>
